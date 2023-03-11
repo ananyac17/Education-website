@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="shortcut icon" type="png" href="images/icon/favicon.png" />
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Comaptible" content="IE=edge" />
+    <title>LearnEd</title>
+    <meta name="desciption" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <script type="text/javascript" src="script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+    <script>
+      $(window).on("scroll", function () {
+        if ($(window).scrollTop()) {
+          $("nav").addClass("black");
+        } else {
+          $("nav").removeClass("black");
+        }
+      });
+    </script>
+    <script>
+      /* When the user clicks on the button, 
+      toggle between hiding and showing the dropdown content */
+      function myFunction() {
+        document.getElementById("myDropdown").classList.toggle("show");
+      }
+      
+      // Close the dropdown if the user clicks outside of it
+      window.onclick = function(event) {
+        if (!event.target.matches('.dropbtn')) {
+          var dropdowns = document.getElementsByClassName("dropdown-content");
+          var i;
+          for (i = 0; i < dropdowns.length; i++) {
+            var openDropdown = dropdowns[i];
+            if (openDropdown.classList.contains('show')) {
+              openDropdown.classList.remove('show');
+            }
+          }
+        }
+      }
+      </script>
+    <style>
+* {
+  box-sizing: border-box;
+}
+
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 5px;
+}
+
+/* Clearfix (clear floats) */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+      .dropbtn {
+        background-color: palevioletred;
+        color: white;
+        padding: 16px;
+        font-size: 16px;
+        border: none;
+        cursor: pointer;
+      }
+      
+      .dropbtn:hover, .dropbtn:focus {
+        background-color: #2980B9;
+      }
+      
+      .dropdown {
+        position: relative;
+        display: inline-block;
+      }
+      
+      .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: palevioletred;
+        min-width: 160px;
+        overflow: auto;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+      }
+      
+      .dropdown-content a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+      }
+      .scroll-container{
+  overflow: auto;
+  white-space: nowrap;
+  padding: 5px 70px 5px 20px;
+  background: transparent;
+  height: 100%;
+  border-radius:15px;
+}
+
+.gridscroll{
+  display:inline-block;
+}
+
+.gridscroll img {
+  margin-right:22px;
+}
+      
+      .dropdown a:hover {background-color: #ddd;}
+      
+      .show {display: block;}
+      </style>
+  </head>
+  <body>
+    <!-- Navigation Bar -->
+    <header id="header">
+      <nav>
+        <div class="logo"><img src="images/icon/logo.png" alt="logo" /></div>
+        <ul>
+          <li><a href="subjects/assessment.html">ASSESSMENT</a></li>
+          <li><a href="#contactus_section">TRAINING</a></li>
+          <li><a href="subjects/coaching.html">COACHING</a></li>
+          <li><a href="#contactus_section">RESOURCES</a></li>
+        
+          <li><a href="login.html">LOGIN</a></li>
+          <li><a href="register.html">REGISTER</a></li>
+          <div class="dropdown">
+            <button onclick="myFunction()" class="dropbtn">TRAINING</button>
+            <div id="myDropdown" class="dropdown-content">
+              <a href="#home">PUBLIC</a>
+              <a href="#about">CORPORATE</a>
+              <a href="#contact">UPCOMING COURSES</a>
+            </div>
+          </div>
+         
+        </ul>
+       
+        <a class="get-started" href="login.html">VIEW COURSES</a>
+        <a href="https://www.facebook.com/"><img src="images/icon\fb2.png" /></a>
+        <a href="https://www.instagram.com/"><img src="images/icon\insta2.png" /></a>
+        <a href="https://twitter.com/home?lang=en"><img src="images/icon\tt2.png" /></a>
+        
+        <img
+          src="images/icon/menu.png"
+          class="menu"
+          onclick="sideMenu(0)"
+          alt="menu"
+        />
+      </nav>
+
+      <div style="text-align:center; font-style:italic;">Scroll to left for more picture</div>
+<div class="scroll-container">
+  <div class="gridscroll">
+    <!-- PLACE YOUR IMG URL HERE -->
+      <img src="images/extra/b1.jpg" width="1400" height="800"/>
+      <img src="images/extra/b2.jpg" width="1400" height="800"/>
+      <img src="images/extra/b3.jpg" width="1400" height="800"/>
+      <img src="images/extra/b4.jpg" width="1400" height="800"/>
+       </div>
+</div>
+
+<!-- TABS -->
+<div class="title">
+		
+  <div class="course">
+    <center>
+      <div class="cbox">
+        <div class="det">
+          <a href="login.html"
+            ><img src="images/courses/book.png" />Collaborate</a
+          >
+        </div>
+        <div class="det">
+          <a href="subjects/quiz.html"
+            ><img src="images/courses/d1.png" />Schedule Assessment</a
+          >
+        </div>
+        <div class="det">
+          <a href="login.html"
+            ><img src="images/courses/paper.png" />New Courses</a
+          >
+        </div>
+        <div class="det">
+          <a href="subjects/quiz.html"
+            ><img src="images/courses/d1.png" />Our Offerings</a
+          >
+        </div>
+      </div>
+    </center>
+    
+    </div>
+  </div>
+    
+
+	   
+    <!-- our services -->
+    <div class="diffSection" id="portfolio_section">
+      <center>
+        <p style="font-size: 50px; padding: 100px; padding-bottom: 40px">
+          OUR PARTNERS
+        </p>
+      </center>
+
+      <div class="row">
+        <div class="column">
+          <p><a href="https://www.scrum.org/"><img src="images/icon/2.png" alt="1" style="width:100%"></a></p>
+        </div>
+        <div class="column">
+          <p><a href="https://scaledagile.com/"><img src="images/icon/1.png" alt="1" style="width:100%"></a></p>
+        </div>
+        <div class="column">
+          <p><a href="https://www.scrumalliance.org/"><img src="images/icon/3.png" alt="1" style="width:100%"></a></p>
+        </div>
+      </div>
+      
+      
+      <div class="content">
+        
+      </div>
+    </div>
+    <div class="extra">
+      <p>OUR SERVICES</p>
+      <div class="smbox">
+        <span
+          ><center>
+            <div class="data">ASSESSMENT</div>
+            <div class="det">How we do our assessments</div>
+          </center></span
+        >
+        <span
+          ><center>
+            <div class="data">TRAINING</div>
+            <div class="det">The trainings we provide</div>
+          </center></span
+        >
+        <span
+          ><center>
+            <div class="data">COACHING</div>
+            <div class="det">Different coaching options available</div>
+          </center></span
+        >
+      
+      </div>
+    </div>
+
+    
+
+
+    <!-- about us -->
+    <div class="diffSection" id="team_section">
+      <center>
+        <p style="font-size: 50px; padding-top: 100px; padding-bottom: 60px">
+        ABOUT US
+        </p>
+		
+      </center>
+      <div class="totalcard">
+        <div class="card">
+          <center><img src="images/creator/ananya.jpeg" /></center>
+          <center>
+            <div class="card-title">Ananya Chakraborty</div>
+            <div id="detail">
+              <p>
+                “You can teach a student a lesson for a day;but if you can
+                teach him to learn by creating curiosity,he will continue the
+                learning process as long as he lives “
+              </p>
+              <div class="duty"></div>
+              <a
+                href="https://www.linkedin.com/in/ananya-chakraborty-2123551a1/"
+                target="_blank"
+                ><button class="btn-roshan">Follow +</button></a
+              >
+            </div>
+          </center>
+        </div>
+        <div class="card">
+          <center><img src="images/creator/MJ.jpeg" /></center>
+          <center>
+            <div class="card-title">Mir-Agha Javad-zada</div>
+            <div id="detail">
+              <p>
+                “ Real education should consist of drawing the goodness and the
+                best out of our own students. What better books can there be
+                than the book of humanity “
+              </p>
+              <div class="duty"></div>
+              <a
+                href="https://www.linkedin.com/in/jmiragha"
+                target="_blank"
+                ><button class="btn-akhil">Follow +</button></a
+              >
+            </div>
+          </center>
+        </div>
+
+		<div class="card">
+			<center><img src="images/creator/zhao.jpeg" /></center>
+			<center>
+			  <div class="card-title">Zhao Zhang</div>
+			  <div id="detail">
+				<p>
+					“When you educate one person you can change a life, when you educate many you can change the world”
+				</p>
+				<div class="duty"></div>
+				<a
+				  href="https://www.linkedin.com/in/zhao-zhang111"
+				  target="_blank"
+				  ><button class="btn-akhil">Follow +</button></a
+				>
+			  </div>
+			</center>
+		  </div>
+
+		  <div class="card">
+			<center><img src="images/creator/yuhan.jpeg" /></center>
+			<center>
+			  <div class="card-title">Yuhan Man</div>
+			  <div id="detail">
+				<p>
+					“The function of education is to teach one to think intensively and to think critically. Intelligence plus character – that is the goal of true education”
+				</p>
+				<div class="duty"></div>
+				<a
+				  href="https://www.linkedin.com/in/yuhan-man-847948149/"
+				  target="_blank"
+				  ><button class="btn-akhil">Follow +</button></a
+				>
+			  </div>
+			</center>
+		  </div>
+		  
+
+		  <div class="card">
+			<center><img src="images/creator/miranda.jpeg" /></center>
+			<center>
+			  <div class="card-title">Miranda Gao</div>
+			  <div id="detail">
+				<p>
+					“If You are planning for a year, sow rice; if you are planning for a decade, plant trees; if you are planning for a lifetime, educate people”
+				</p>
+				<div class="duty"></div>
+				<a
+				  href="https://www.linkedin.com/in/mirandagpm/"
+				  target="_blank"
+				  ><button class="btn-akhil">Follow +</button></a
+				>
+			  </div>
+			</center>
+		  </div>
+
+
+      </div>
+    </div>
+
+   
+ 
+
+    <!-- get inspired-->
+    <div id="makeitfull">
+      <a href="#review_section"><img src="images/icon/makeitfull.png" /></a>
+    </div>
+    <div class="review">
+      <div class="diffSection" id="review_section">
+        <center>
+          <p
+            style="
+              font-size: 40px;
+              padding: 100px;
+              padding-bottom: 40px;
+              color: #2e3d49;
+            "
+          >
+           GET INSPIRED
+          </p>
+        </center>
+      </div>
+      
+      <div class="rev-container">
+        <div class="rev-card">
+          <div class="identity">
+            <img src="images/creator/humanNotExist1.jpg" />
+            <p>Sophie Daniel</p>
+            <h6>Java</h6>
+            <div class="rating">
+              <img src="images/icon/star.png" /><img
+                src="images/icon/star.png"
+              /><img src="images/icon/star.png" /><img
+                src="images/icon/star.png"
+              /><img src="images/icon/star.png" />
+            </div>
+          </div>
+          <div class="rev-cont">
+            <p id="title">Review:</p>
+            <p id="content">
+              I did Java Fundamental course with Raj. It was a great
+              experience. The brain teasers and assignments, actually the whole
+              lot of content was really good. Some problems were challenging yet
+              interesting. Was explained very well where ever I stuck...
+            </p>
+          </div>
+        </div>
+        <div class="rev-card">
+          <div class="identity">
+            <img src="images/creator/humanNotExist2.jpg" />
+            <p>Clayton Clair</p>
+            <h6>C/C++</h6>
+            <div class="rating">
+              <img src="images/icon/star.png" /><img
+                src="images/icon/star.png"
+              /><img src="images/icon/star.png" /><img
+                src="images/icon/star.png"
+              /><img src="images/icon/star.png" />
+            </div>
+          </div>
+          <div class="rev-cont">
+            <p id="title">Review:</p>
+            <p id="content">
+              When I was watching "Dear Zindagi", I could relate Sharukh Khan to
+              Raj. The way Sharukh Khan was giving life lessons to Alia
+              Bhatt, in the same way Arnav Bhaiya will give coding life lessons
+              which will guide you throughout your code life...
+            </p>
+          </div>
+        </div>
+        <div class="rev-card">
+          <div class="identity">
+            <img src="images/creator/humanNotExist3.jpg" />
+            <p>Devyn Sethi</p>
+            <h6>JEE</h6>
+            <div class="rating">
+              <img src="images/icon/star.png" /><img
+                src="images/icon/star.png"
+              /><img src="images/icon/star.png" /><img
+                src="images/icon/star.png"
+              /><img src="images/icon/star.png" />
+            </div>
+          </div>
+          <div class="rev-cont">
+            <p id="title">Review:</p>
+            <p id="content">
+              LearnEd was an amazing experience for me. I belong to electronics
+              department and had a little experience in coding but I think it
+              has helped me think things through in a much more analytical
+              manner. Coding is important , It
+              gives you a better understanding about how to approach a
+              problem...
+            </p>
+          </div>
+        </div>
+        <div class="rev-card">
+          <div class="identity">
+            <img src="images/creator/humanNotExist4.jpg" />
+            <p>Rylee Phillips</p>
+            <h6>Python</h6>
+            <div class="rating">
+              <img src="images/icon/star.png" /><img
+                src="images/icon/star.png"
+              /><img src="images/icon/star.png" /><img
+                src="images/icon/star.png"
+              /><img src="images/icon/star.png" />
+            </div>
+          </div>
+          <div class="rev-cont">
+            <p id="title">Review:</p>
+            <p id="content">
+              This was my first complete course at coding blocks. I attended the
+              Python course in Winter 2021 and loved it which made me join the
+              full course. Raj Heda has good knowledge about the field and were very helpful in making us
+              understand the concepts. I would certainly recommend this to
+              anyone...
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    
+
+    <!-- FEEDBACK -->
+    <center>
+    <div class="title2" id="feedBACK">
+      <span>STAY CONNECTED WITH US</span>
+      <div class="shortdesc2">
+        <p>Receive information on upcoming workshops and insights</p>
+      </div>
+    </div>
+  </center>
+
+    <div class="feedbox">
+      <div class="feed">
+        <form
+          action="mailto:roshank9419@gmail.com"
+          method="post"
+          enctype="text/plain"
+        >
+          <label>Your Name</label><br />
+          <input type="text" name="" class="fname" required="required" /><br />
+          <label>Email</label><br />
+          <input type="email" name="mail" required="required" /><br />
+         
+          <button type="submit" id="csubmit">Sign Up</button>
+        </form>
+      </div>
+    </div>
+
+
+    <!-- FOOTER -->
+    <footer>
+      <div class="footer-container">
+        <div class="left-col">
+          <img src="images/icon/logo - Copy.png" style="width: 200px" />
+          <div class="logo"></div>
+          <div class="social-media">
+			
+            
+          </div>
+          <br /><br />
+         
+          <br />
+          
+          <br />
+          
+        </div>
+		
+		<div id="footer">
+			
+			<ul>
+				<li><a href="#">RELATED LINKS</a></li>
+				<li><a href="#">ABOUT US</a></li>
+				<li><a href="#">CONTACT US</a></li>
+				<li><a href="#">BECOME A TRAINER</a></li>
+				<li><a href="#">TERMS AND CONDITIONS</a></li>
+				
+			</ul>
+		</div>
+    <div class="right-col">
+      <h1>FOLLOW US</h1>
+      <a href="https://www.facebook.com/"><img src="images/icon\fb.png" width="50" height="50" /></a>
+            <a href="https://www.instagram.com/"><img src="images/icon\insta.png" width="50" height="50" /></a>
+            <a href="https://twitter.com/home?lang=en"><img src="images/icon\tt.png" width="50" height="50" /></a>
+            <a href="https://www.youtube.com/"><img src="images/icon\ytube.png" width="50" height="50" /></a>
+            <a href="https://www.linkedin.com/feed/"><img src="images/icon\linkedin.png" width="50" height="50" /></a>
+      </div>
+			
+      </div>
+    </footer>
+  </body>
+</html>

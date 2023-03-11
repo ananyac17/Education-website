@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="shortcut icon" type="png" href="../images/icon/favicon.png">
+	<title>Assessment on LearnEd</title>
+	<link rel="stylesheet" type="text/css" href="quizStyle.css">
+	<script type="text/javascript" src="../script.js"></script>
+	<meta name="desciption" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+    <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+	<style> div.transbox {
+		margin: 30px;
+		background-color: #ffffff;
+		border: 1px solid black;
+		opacity: 0.9;
+	  }
+  
+	  div.transbox h2 {
+		margin: 5%;
+		font-weight: bold;
+		color: #000000;
+	  }
+	  a {
+  text-decoration: none;
+}
+.get-started {
+  margin-left: 50px;
+  padding: 5px 20px;
+  border: 2px solid #df2771;
+  border-radius: 20px;
+  text-decoration: none;
+
+  transition: 0.5s;
+  background-color: #df2771;
+  color: #fff;
+}
+.get-started:hover {
+  color: #2e2e2e;
+  background: #fff;
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+header {
+  height: 90vh;
+  /* background: #000; */
+}
+nav {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  top: 0;
+  position: fixed;
+  display: flex;
+  width: 100%;
+  z-index: 1000;
+  background: #fff;
+  justify-content: space-around;
+  transition: 1.5s;
+  align-items: center;
+}
+nav ul {
+  display: flex;
+  align-items: center;
+}
+nav ul li {
+  list-style: none;
+  margin: 5px 10px;
+}
+nav ul li a {
+  padding: 2px 10px;
+  color: #2e2e2e;
+  cursor: pointer;
+  transition: 0.5s;
+  text-decoration: none;
+}
+nav ul li a:hover {
+  color: #fff;
+  border-radius: 5px;
+  background: #df2771;
+}
+.active {
+  color: #fff;
+  border-radius: 5px;
+  background: #df2771;
+}
+.fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+}
+
+.fa-google {
+  background: #dd4b39;
+  color: white;
+}
+
+.fa-linkedin {
+  background: #007bb5;
+  color: white;
+}
+
+.fa-youtube {
+  background: #bb0000;
+  color: white;
+}
+
+.-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 216px;
+  height: 56px;
+  text-align: center;
+  border-radius: 12px;
+ 
+}
+.dropbtn {
+        background-color: palevioletred;
+        color: white;
+        padding: 16px;
+        font-size: 16px;
+        border: none;
+        cursor: pointer;
+      }
+      
+      .dropbtn:hover, .dropbtn:focus {
+        background-color: #2980B9;
+      }
+      
+      .dropdown {
+        position: relative;
+        display: inline-block;
+      }
+      
+      .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: palevioletred;
+        min-width: 160px;
+        overflow: auto;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+      }
+      
+      .dropdown-content a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+      }
+      
+      .dropdown a:hover {background-color: #ddd;}
+	  .show {display: block;}
+
+.-btn:hover {
+  opacity: .8;
+}
+
+.-bg {
+  background: #df2771;
+}
+
+.-txt {
+  color: #fff;
+}
+
+.-xs {
+  font-size: 12px;
+}
+	
+
+/*FOOTER*/
+footer {
+  color: #e5e8ef;
+  background: #000d;
+  padding: 50px 0;
+}
+footer .footer-container {
+  max-width: 1300px;
+  margin: auto;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap-reverse;
+}
+footer .social-media img {
+  width: 22px;
+}
+footer .logo {
+  width: 180px;
+  color: #fff;
+}
+footer .social-media a {
+  margin-right: 10px;
+  font-size: 22px;
+  text-decoration: none;
+}
+footer .right-col h1 {
+  font-size: 26px;
+}
+footer .border {
+  width: 100px;
+  height: 4px;
+  background: linear-gradient(to right, #fa4b37, #df2771);
+  margin: 2px;
+}
+footer .newsletter-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+footer input::placeholder {
+  color: white !important;
+}
+footer .txtb {
+  flex: 1;
+  padding: 18px 40px;
+  font-size: 16px;
+  background: #343a40;
+  border: none;
+  font-weight: 700;
+  outline: none;
+  border-radius: 5px;
+  min-width: 260px;
+  margin-top: 20px;
+  color: white;
+}
+footer .btn {
+  margin-top: 20px;
+  padding: 18px 40px;
+  font-size: 16px;
+  color: #f1f1f1;
+  background: linear-gradient(to right, #fa4b37, #df2771);
+  border: none;
+  font-weight: 700;
+  outline: none;
+  border-radius: 5px;
+  margin-left: 20px;
+  cursor: pointer;
+  transition: opacity 0.3s linear;
+}
+footer .btn:hover {
+  opacity: 0.7;
+}
+.footer .row .col {
+  display: flex;
+  flex-direction: column;
+}
+
+	  </style>
+	   <script>
+		$(window).on("scroll", function () {
+		  if ($(window).scrollTop()) {
+			$("nav").addClass("black");
+		  } else {
+			$("nav").removeClass("black");
+		  }
+		});
+	  </script>
+	  <script>
+		/* When the user clicks on the button, 
+		toggle between hiding and showing the dropdown content */
+		function myFunction() {
+		  document.getElementById("myDropdown").classList.toggle("show");
+		}
+		
+		// Close the dropdown if the user clicks outside of it
+		window.onclick = function(event) {
+		  if (!event.target.matches('.dropbtn')) {
+			var dropdowns = document.getElementsByClassName("dropdown-content");
+			var i;
+			for (i = 0; i < dropdowns.length; i++) {
+			  var openDropdown = dropdowns[i];
+			  if (openDropdown.classList.contains('show')) {
+				openDropdown.classList.remove('show');
+			  }
+			}
+		  }
+		}
+		</script>
+</head>
+<body>
+	
+<!-- NAVIGATION -->
+<header id="header">
+	<nav>
+	  <div class="logo"><img src="../images/icon/logo.png" alt="logo" /></div>
+	  <ul>
+		<li><a href="#">ASSESSMENT</a></li>
+		<li><a href="../index.html">TRAINING</a></li>
+		<li><a href="coaching.html">COACHING</a></li>
+		<li><a href="../index.html">RESOURCES</a></li>
+	  
+		<li><a href="../login.html">LOGIN</a></li>
+		<li><a href="../register.html">REGISTER</a></li>
+		<div class="dropdown">
+		  <button onclick="myFunction()" class="dropbtn">TRAINING</button>
+		  <div id="myDropdown" class="dropdown-content">
+			<a href="#home">PUBLIC</a>
+			<a href="#about">CORPORATE</a>
+			<a href="#contact">UPCOMING COURSES</a>
+		  </div>
+		</div>
+	   
+	  </ul>
+	 
+	  <a class="get-started" href="login.html">VIEW COURSES</a>
+	  
+	  <a href="https://www.facebook.com/"><img src="../images/icon\fb2.png" /></a>
+	  <a href="https://www.instagram.com/"><img src="../images/icon\insta2.png" /></a>
+	  <a href="https://twitter.com/home?lang=en"><img src="../images/icon\tt2.png" /></a>
+
+	  
+	</nav>
+	
+
+<!-- MAIN Heading of Page -->
+	<div class="title" id="title">
+		<span>ASSESSMENT</span>
+		<div class="shortdesc"><br>
+			
+		</div>
+		<a href="../index.html"><button>C O N T A C T  U S</button></a>
+		
+	</div>
+
+
+
+	<div class="transbox">
+		<h1>
+			Why Assessment?
+		</h1>
+		<h3>
+			Today, more and more companies are adopting iterative software design methodologies like
+Agile. Whether you are just starting on this journey or if you already have adopted many agile
+techniques, it’s vitally important to first understand where you are so you know what you need to
+do. As we have done for so many other companies, Apex can be your partner in assessing your
+current capability, to help remediate those areas needing correction, and to create a plan for
+upgrading skills on your Agile journey.
+While you may find a number of skill surveys online, Apex offers six comprehensive Agile skill
+assessments to pinpoint your current capabilities. We drew upon our extensive background in
+software development to create, from scratch, assessments that reflect actual business
+environments. Following your assessment, Apex will work with you to provide both
+individualized and customized coaching; Apex complements our customized training with a
+number of certification-oriented training programs.
+The Apex assessments contain both prescriptive and proscriptive components. We can recognize
+those patterns and behaviors in your organization that have you on the right track to improving
+your agility. As experts in agile software development with decades of industry experience in
+business like yours, we can identify those behaviors that you will want to build upon. Equally
+important, our experience as developers and leaders within the software industry will allow us to
+recognize other patterns and behaviors that are detracting from your business and development
+agility.
+		</h3>
+		<p>.</p>
+		<h1>
+			Leadership Assessment
+		</h1>
+		<h3>
+			The effectiveness of Agile development efforts will be either magnified or diminished by your
+organization’s leaders. The Apex leadership assessment quantitatively assesses the skills and
+capabilities of your leadership team. As outlined in the Agile Manifesto, the following principles
+are of paramount importance to leaders. First, producing value: does leadership recognize that
+the production of value over the production of features? Second, encouraging change: does
+leadership not only welcome change, and not only encourage change, but actually reward
+change? And third, deliver frequently: does leadership guide the organization to processes
+conducive to continuous improvement and delivery? Apex’s leadership assessment
+comprehensively surveys leadership skill in your organization, and it produces recommendations
+to get leadership on the right track to agility.
+		</h3>
+		<p>.</p>
+		<h1>
+			Organization Assessment
+		</h1>
+		<h3>
+			As important as Agile is to your software development teams, many of the same principles apply
+to your organization. The Apex Organization Assessment will measure your current capabilities
+as an Agile organization. We will identify those areas where you are on the right track as well as
+those where you are following practices that are counterproductive. Like a tried and true family
+recipe, we have distilled our decades of experience in the software industry to create a
+comprehensive assessment of software development practices. Among others metrics, we assess
+the following key capabilities: value: do each your product releases produce recognizable and
+useful value for the customer; openness to change: are your organizations receptive and
+encouraging of changing requirements, both early and late in the product cycle; and frequent
+deliveries via a continuous improvement and delivery pipeline.
+		</h3>
+		<p>.</p>
+		<h1>
+			Portfolio Assessment
+		</h1>
+		<h3>
+			Rarely does a company produce a single product or feature that is divorced from other
+cooperating products. In an organization with multiple and simultaneous development efforts, a
+siloed approach to product development becomes counterproductive. Do your product teams
+operate independently or is there a cooperative spirit aligning your goals? Is progress gated by
+milestones and measured by the number of tasks completed? Many of the same techniques you
+apply to iterative software development also apply to portfolio management. Our portfolio
+assessment ascertains where you sit on an Agile spectrum and more importantly, what practices
+can you adopt that will bring value, openness to change, and improved delivery to your product
+portfolio.
+		</h3>
+		<p>.</p>
+		<h1>
+			Program Assessment
+		</h1>
+		<h3>
+			The Apex program assessment evaluates how well your program development strategy aligns
+with your product portfolio. In an organization with multiple simultaneous development streams,
+cooperation and good intentions alone will not produce intended results. Apex measures the
+engagement of program stakeholders and analyzes strategies for predictability and problem
+resolution. Apex looks at program planning - is it synchronized with the other programs in your
+enterprise portfolio? The Apex program assessment measures the propensity of your program to
+exist cooperatively within the portfolio and deliver value while being open to change.
+		</h3>
+		<p>.</p>
+		<h1>
+			Team Assessment
+		</h1>
+		<h3>
+			There are two important considerations. First, there is no perfect team environment. Second,
+creating an environment where teams can thrive takes a lot of work. The Apex Team Assessment
+looks at the makeup and dynamics of an individual agile team. We ascertain to what degree has
+the team jelled or what obstacles may be preventing that from occurring. We look at the team
+dynamics: how much trust is there between team members? Is there a team culture, and if so, is
+the culture beneficial to, or detrimental to, the team’s success? Does the team feel empowered to
+deliver great products? Apex’s decades of experience in Agile organizations allows us to
+recognize and assess those aspects of teamwork that encourage producing value, being open to
+change, and allow for continuous improvement and delivery.
+		</h3>
+		<p>.</p>
+		<h1>
+			Individual Role/Talent
+		</h1>
+		<h3>
+			Apex in-house experts are not just experts in the Agile development methodology, but we have
+earned that expertise from decades of experience in multiple software industries. We know
+individuals like your key contributors because we have also been key contributors. Drawing from
+deep domain expertise, Apex can assess the capabilities of key individuals within your
+organization. The core Agile principles of delivering value, openness to change, and improving
+delivery represent transformative skills and behavior. Our assessments first measures where your
+key contributors are on an Agile spectrum. In addition, the assessment produces concrete
+recommendations for help them achieve excellence.
+		</h3>
+		<center><a href="../index.html" class="-btn -bg -txt">
+			CONTACT US
+		  </a>
+		</center>
+	  </div>
+	 
+	  
+	  
+</div>
+
+ <!-- FOOTER -->
+ <footer>
+	<div class="footer-container">
+	  <div class="left-col">
+		<img src="../images/icon/logo - Copy.png" style="width: 200px" />
+		<div class="logo"></div>
+		<div class="social-media">
+		  
+		  
+		</div>
+		<br /><br />
+	   
+		<br />
+		
+		<br />
+		
+	  </div>
+	  
+	  <div id="footer">
+		  
+		  <ul>
+			  <li><a href="#">RELATED LINKS</a></li>
+			  <li><a href="#">ABOUT US</a></li>
+			  <li><a href="#">CONTACT US</a></li>
+			  <li><a href="#">BECOME A TRAINER</a></li>
+			  <li><a href="#">TERMS AND CONDITIONS</a></li>
+			  
+		  </ul>
+	  </div>
+  <div class="right-col">
+	<h1>FOLLOW US</h1>
+	<a href="https://www.facebook.com/"><img src="../images/icon\fb.png" width="50" height="50" /></a>
+		  <a href="https://www.instagram.com/"><img src="../images/icon\insta.png" width="50" height="50" /></a>
+		  <a href="https://twitter.com/home?lang=en"><img src="../images/icon\tt.png" width="50" height="50" /></a>
+		  <a href="https://www.youtube.com/"><img src="../images/icon\ytube.png" width="50" height="50" /></a>
+		  <a href="https://www.linkedin.com/feed/"><img src="../images/icon\linkedin.png" width="50" height="50" /></a>
+	</div>
+		  
+	</div>
+  </footer>
+	<script type="text/javascript" src="../script.js"></script>
+</body>
+</html>
